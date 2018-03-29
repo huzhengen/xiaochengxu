@@ -1,0 +1,40 @@
+.page{
+  position: relative;
+}
+.lists{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.list{
+  width: 100%;
+  height: 200rpx;
+  background: #eee;
+  margin: 0 0 10rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  height: 110rpx;
+  line-height: 110rpx;
+  border-bottom: 1px solid red;
+  padding: 0 0 0 20rpx;
+}
+.time{
+  color: #2a2bff;
+  line-height: 90rpx;
+  padding: 0 0 0 20rpx;
+}
+.add{
+  width: 100rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position: absolute;
+  right: 50rpx;
+  bottom: 100rpx;
+  border: 1px solid #000;
+  border-radius: 30rpx;
+}
