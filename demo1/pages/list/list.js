@@ -15,7 +15,6 @@ Page({
   },
   edit(e) {
     var id = e.currentTarget.dataset.id;
-    console.log(id);
     wx.navigateTo({
       url: '../add/add?add='+id,
       success: function (res) { },
@@ -50,7 +49,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    initData(this);
   },
 
   /**
