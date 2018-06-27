@@ -1,0 +1,39 @@
+<import src="../../templates/item-template.wxml" />
+<import src="../../templates/footer.wxml" />
+
+<view class='main'>
+  <view class='video-tab-box'>
+    <text class='line' style='margin-left:{{line_ml}}rpx;'></text>
+    <view class='video-tab-nav {{vtab==1?"on":""}}' data-vtab="1" bindtap='changeTab'>热门</view>
+    <view class='video-tab-nav {{vtab==2?"on":""}}' data-vtab="2" bindtap='changeTab'>搞笑</view>
+    <view class='video-tab-nav {{vtab==3?"on":""}}' data-vtab="3" bindtap='changeTab'>综艺</view>
+    <view class='video-tab-nav {{vtab==4?"on":""}}' data-vtab="4" bindtap='changeTab'>资讯</view>
+  </view>
+  <view class='video-list-box'>
+    <view class='videoList_hot' wx:if="{{vtab==1}}">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+        <template is="video-item" data="{{item}}"></template>
+      </block>
+    </view>
+    <view class='videoList_amuse' wx:if="{{vtab==2}}">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+        <template is="video-item" data="{{item}}"></template>
+      </block>
+    </view>
+    <view class='videoList_variety' wx:if="{{vtab==3}}">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+        <template is="video-item" data="{{item}}"></template>
+      </block>
+    </view>
+    <view class='videoList_information' wx:if="{{vtab==4}}">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+        <template is="video-item" data="{{item}}"></template>
+      </block>
+    </view>
+  </view>
+  <view class='loadMore'>
+    <block wx:if="{{isLoading}}">
+      <text>正在加载...</text>
+    </block>
+  </view>
+</view>

@@ -21,7 +21,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 页面初始化，options为页面跳转所带来的参数
+    var that = this;
+    console.log(options);
+    that.setData({
+      id: parseInt(options.id)
+    });
+    this.getBrand();
   },
 
   /**
@@ -71,5 +77,28 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  getBrand: function(){
+    let that = this;
+    util.request(api.BrandDetail, {id:that.data.id}).then(function(res){
+      if(res.errno === 0){
+        that.setData({
+          brand: res.data.brand
+        });
+        that.getGoodsList();
+      }
+    })
+  },
+
+  getGoodsList(){
+    var that = this;
+    util.request(api.GoodsList, {brandId: that.data.id, page: that.data.page, size: that.data.size}).then(function(res){
+      if(res.errno === 0){
+        that.setData({
+          goodsList: res.data.goodsList
+        })
+      }
+    })
   }
 })
