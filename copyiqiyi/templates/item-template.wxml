@@ -1,4 +1,4 @@
-<template>
+<template name="video-item">
   <view class='video-list'>
     <view class='wrap-video'>
       <view class='video-title'>{{item.title}}</view>

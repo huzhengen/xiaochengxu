@@ -41,7 +41,7 @@
       </navigator>
     </view>
     <view class='movie-containers'>
-      <block wx:for="{{List}}" wx:if="{{index < 6}}">
+      <block wx:for="{{List}}" wx:if="{{index < 6}}" wx:key="unique">
         <view class='movie-container' data-vid="{{item.video_id}}" data-title="{{item.title}}" bindtap='openDetail'>
           <image class='movie-photo' src='{{item.thumbnail}}'></image>
           <text class='update'>更新到第{{item.update}}集</text>

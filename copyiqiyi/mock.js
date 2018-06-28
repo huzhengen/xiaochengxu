@@ -43,8 +43,8 @@ const thumbnail = {
     }]
 }
 
-const vedios = {
-    vedio: {
+const videos = {
+  video: {
         hot: [{
             title: '热门1',
             hot_id: '0001',
@@ -150,5 +150,5 @@ const vedios = {
 }
 export {
     thumbnail,
-    vedios
+    videos
 }

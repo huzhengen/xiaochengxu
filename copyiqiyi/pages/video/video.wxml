@@ -11,22 +11,22 @@
   </view>
   <view class='video-list-box'>
     <view class='videoList_hot' wx:if="{{vtab==1}}">
-      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx" wx:key="unique">
         <template is="video-item" data="{{item}}"></template>
       </block>
     </view>
     <view class='videoList_amuse' wx:if="{{vtab==2}}">
-      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx" wx:key="unique">
         <template is="video-item" data="{{item}}"></template>
       </block>
     </view>
     <view class='videoList_variety' wx:if="{{vtab==3}}">
-      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx" wx:key="unique">
         <template is="video-item" data="{{item}}"></template>
       </block>
     </view>
     <view class='videoList_information' wx:if="{{vtab==4}}">
-      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx">
+      <block wx:for="{{videoList_hot}}" wx:for-item="item" wx:for-index="idx" wx:key="unique">
         <template is="video-item" data="{{item}}"></template>
       </block>
     </view>

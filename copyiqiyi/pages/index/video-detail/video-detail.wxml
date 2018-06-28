@@ -1,2 +1,7 @@
-<!--pages/index/video-detail/video-detail.wxml-->
-<text>pages/index/video-detail/video-detail.wxml</text>
+<view class="main">
+  <view class='video-box'>
+    <view class='player'>
+      <video id='myVideo' src="{{playerUrl}}" controls autoplay='{{true}}' bindended='{{next}}' bindpause='{{stop}}'></video>
+    </view>
+  </view>
+</view>

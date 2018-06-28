@@ -32,7 +32,6 @@ Page({
         langs: 'en'
       }
     }).then(res=>{
-      console.log(res);
       const imgsUrlList = res.images;
       this.setData({
         imgsUrlList,

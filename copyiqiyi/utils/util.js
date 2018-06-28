@@ -37,7 +37,6 @@ let util = {
           }else{
             res = {res: 0, data: returnData};
           }
-          console.log(res)
           resolve(res);
           return;
         }
@@ -58,7 +57,6 @@ let util = {
         dataType,
         success(res){
           let returnRes = [];
-          console.log(data);
           if(data.hasOwnProperty('tag')){
             let arr = res.data[data.tag];
             if(data.hasOwnProperty('id')){
@@ -72,7 +70,6 @@ let util = {
               resolve(returnRes);
               return;
             }
-            // console.log(arr);
             returnRes = arr;
           }
           if(data.hasOwnProperty('key')){
