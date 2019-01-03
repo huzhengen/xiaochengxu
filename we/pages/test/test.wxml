@@ -1,0 +1,10 @@
+<view><video src="https://img1.famulei.com/sv/201808/201808061555557080_new.m3u8" controls></video></view>
+<view><zan-field
+  title="{{ field.title }}"
+  placeholder="{{ field.placeholder }}"
+  focus="{{ field.focus }}"
+  value="{{ field.value }}"
+  bind:change="handleFieldChange"
+>
+</zan-field></view>
+

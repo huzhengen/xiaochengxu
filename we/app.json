@@ -1,0 +1,27 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/mine/mine",
+		"pages/topic/topic",
+		"pages/detail/detail",
+		"pages/collected/collected",
+		"pages/about/about_wechat",
+		"pages/about/about_me",
+		"pages/authorization/authorization",
+		"pages/test/test"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "TeamWE俱乐部",
+		"navigationBarTextStyle": "black",
+		"enablePullDownRefresh": true
+	},
+	"plugins": {
+		"tencentvideo": {
+			"version": "1.1.2",
+			"provider": "wxa75efa648b60994b"
+		}
+	}
+}

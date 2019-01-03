@@ -1,0 +1,10 @@
+<!-- //39.84383
+//116.371935 -->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+<view class='lylx'>
+  <view>地址：北京丰台区南三环外四环内嘉园路星河城1号院18号楼。</view>
+	<view>地铁路线：4号线在公益西桥站，A口出往南直行见路口右转弯直行500米左右，右手边就是安太医院。</view>
+	<view>公交路线：特8路外环，特14路，72，998路，48，66，556，646等城南嘉园北下车。</view>
+	<view>自驾车：导航北京安太嘉园医院。三环走右安南桥出口，一直向南（四环）的方向开，就是嘉园路，走两个红绿灯，看到一片黄颜色的楼，就能看到我们医院，我们在嘉园路的路东侧。</view>
+  <view>如果就医途中路线不清楚，可以直接拔打丰台院区电话： 010-67537758。</view>
+</view>

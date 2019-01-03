@@ -1,0 +1,105 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class='head'>
+    <navigator url='/page/index/index' class='home'><image src='{{homeImg}}'></image></navigator>
+    <navigator url='/page/index/index' class='logo'><image src='{{logoImg}}'></image></navigator>
+    <image src='{{navbarImg}}' class='navbar'></image>
+  </view> -->
+  <view class='bannerWrap'>
+    <swiper class='banner' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="nav">
+      <navigator url='{{item.url}}' wx:for="{{navList}}" wx:key="*this" class='navList' background-image="url({{item.imgUrl}})"><view></view></navigator>
+    </view>
+  </view>
+  <view>
+    <view class='xiangmu'>
+      <text class='h3'>{{xiangmu1.name}}</text>
+      <text class='h4'>咨询热线：010-67537758</text>
+    </view>
+    <view class='xm'>
+      <block wx:for="{{xiangmu1.list}}" wx:key="*this" wx:for-index="iconIndex" wx:for-item="iconItem">
+        <view><image src='{{iconItem.iconUrl}}'></image><text>{{iconItem.iconText}}</text></view>
+      </block> 
+    </view>
+    <view class='myzd' bindtap='makePhoneCall'>
+      <view class='nxlj'>没有找到您想了解的内容?</view>
+      <view class='ljgd'>了解更多</view>
+    </view>
+    <view class='xiangmu'>
+      <text class='h3'>{{xiangmu2.name}}</text>
+      <text class='h4'>咨询热线：010-67537758</text>
+    </view>
+    <view class='xm'>
+      <block wx:for="{{xiangmu2.list}}" wx:key="*this" wx:for-index="iconIndex" wx:for-item="iconItem">
+        <view><image src='{{iconItem.iconUrl}}'></image><text>{{iconItem.iconText}}</text></view>
+      </block> 
+    </view>
+    <view class='myzd' bindtap='makePhoneCall'>
+      <view class='nxlj'>没有找到您想了解的内容?</view>
+      <view class='ljgd'>了解更多</view>
+    </view>
+  </view>
+</view>
+<view class='news'>
+  <view class='left'></view>
+  <swiper class='right' indicator-dots="{{newsSwiper.indicatorDots}}" autoplay="{{newsSwiper.autoplay}}" circular="{{newsSwiper.circular}}" vertical="{{newsSwiper.vertical}}" interval="{{newsSwiper.interval}}" duration="{{newsSwiper.duration}}" previous-margin="{{newsSwiper.previousMargin}}px" next-margin="{{newsSwiper.nextMargin}}px">
+      <block wx:for="{{newsList}}" wx:key="*this">
+        <swiper-item>
+          <text>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
+<view class='zj'>
+  <text class='h3'>{{zj.title}}</text>
+  <text class='h4'>一对一问诊保护患者隐私</text>
+  <swiper class='zjlist' indicator-dots="{{zj.indicatorDots}}" autoplay="{{zj.autoplay}}" circular="{{zj.circular}}" vertical="{{zj.vertical}}" interval="{{zj.interval}}" duration="{{zj.duration}}" previous-margin="{{zj.previousMargin}}px" next-margin="{{zj.nextMargin}}px">
+    <block wx:for="{{zj.zjList}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.imgUrl}}"></image>
+        <view class='textborder'><text>{{item.text}}</text></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='guahao'>
+  <text class='h3'>在线自助挂号</text>
+  <text class='h4'>(网络预约 免排队当日就诊<text>*信息已加密*</text>)</text>
+  <form>
+    <input class="weui-input" type='text' placeholder="请输入您的姓名" adjust-position="true" />
+    <input class="weui-input" type='text' maxlength="12" placeholder="请输入您的电话" adjust-position="true" />
+    <input class="weui-input" type='text' maxlength="12" placeholder="请输入预约时间" adjust-position="true" />
+    <textarea placeholder="请简单阐述您的病情..." />
+    <view class='tjxx'>
+      <button>提交信息</button>
+      <button bindtap='makePhoneCall'>点击咨询</button>
+    </view>
+  </form>
+</view>
+<view class='footer'>
+  <image class='contactimg' src='{{contactImgUrl}}'></image>
+  <view class='contact'>
+    <view class='jyl'><image src='{{jylImgUrl}}'></image></view>
+    <view class='right'>
+      <text>门诊时间：</text>
+      <text>08:30-17:00</text>
+      <text>医院地址：</text>
+      <text>北京市丰台区嘉园路</text>
+      <view class='lylx'>
+      <button bindtap='gotoMap'>来院路线</button>
+      <button>医院环境</button>
+    </view>
+    </view>
+  </view>
+</view>
+<view class='copyright'>
+  <text>网站版权及解释权归北京安太嘉园医院所有</text>
+  <text>京ICP备14026720号-3 Copyright © 2003-2018 Antai</text>
+</view>

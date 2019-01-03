@@ -21,7 +21,7 @@ Page({
   },
   onLoad: function () {
     this.requestImg();
-    this.getListData();
+    this.getListData();    
   },
   requestImg(){
     util.request({

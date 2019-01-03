@@ -1,0 +1,6 @@
+.lylx{
+  padding: 30rpx 15rpx;
+}
+.lylx view{
+  margin-bottom: 20rpx;
+}

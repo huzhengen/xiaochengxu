@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/map/map",
+    "pages/about/about",
+    "pages/expert/expert",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+		"navigationBarBackgroundColor": "#785e4d",
+    "navigationBarTitleText": "北京安太嘉园医院",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "来院路线"
+      }
+    ],
+    "position": "top"
+  }
+}
